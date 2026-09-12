@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #00ff66;
+  --color-primary-hover: #00e65c;
+  --color-primary-glow: rgba(0, 255, 102, 0.4);
+}
+
+@layer utilities {
+  .glass-nav {
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  }
+  
+  .dark .glass-nav {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 30px rgba(0, 255, 102, 0.05);
+  }
+
+  .glow-text {
+    text-shadow: 0 0 10px var(--color-primary-glow);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}

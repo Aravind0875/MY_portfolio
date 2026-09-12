@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Mail, Phone, MapPin } from "lucide-react";
 import Link from "next/link";
 import { GitHubCalendar } from "react-github-calendar";
 import { useTheme } from "next-themes";
@@ -12,7 +12,7 @@ export default function Hero() {
     <section id="home" className="pt-40 pb-20 px-6 max-w-4xl mx-auto min-h-screen flex flex-col justify-center">
       <div className="space-y-6">
         <p className="text-sm font-semibold tracking-widest text-slate-500 dark:text-slate-400 uppercase">
-          SOFTWARE DEVELOPER
+          SOFTWARE DEVELOPER & DATA ANALYST
         </p>
         <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight text-slate-900 dark:text-white">
           Hi, I'm Gamma Aravind.<br />
@@ -21,6 +21,28 @@ export default function Hero() {
         <p className="max-w-2xl text-lg text-slate-600 dark:text-slate-400">
           A Computer Science student at Indian Institute of Information Technology Vadodara, passionate about Software Engineering, Data Analytics, and building scalable applications.
         </p>
+
+        {/* Quick Contact & Details Pills */}
+        <div className="flex flex-wrap gap-3 pt-1">
+          <a
+            href="mailto:gammaaravind143@gmail.com"
+            className="flex items-center space-x-2 text-xs sm:text-sm font-medium px-3.5 py-1.5 rounded-full bg-slate-100 dark:bg-white/5 hover:bg-slate-200 dark:hover:bg-white/10 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-white/10 transition-colors"
+          >
+            <Mail className="w-3.5 h-3.5 text-primary" />
+            <span>gammaaravind143@gmail.com</span>
+          </a>
+          <a
+            href="tel:+919550968255"
+            className="flex items-center space-x-2 text-xs sm:text-sm font-medium px-3.5 py-1.5 rounded-full bg-slate-100 dark:bg-white/5 hover:bg-slate-200 dark:hover:bg-white/10 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-white/10 transition-colors"
+          >
+            <Phone className="w-3.5 h-3.5 text-primary" />
+            <span>+91-9550968255</span>
+          </a>
+          <div className="flex items-center space-x-2 text-xs sm:text-sm font-medium px-3.5 py-1.5 rounded-full bg-slate-100 dark:bg-white/5 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-white/10">
+            <MapPin className="w-3.5 h-3.5 text-slate-400" />
+            <span>Vadodara, Gujarat</span>
+          </div>
+        </div>
         
         <div className="flex items-center space-x-4 pt-4">
           <Link

@@ -23,8 +23,16 @@ export default function Experience() {
       date: "Virtual Experience Program",
       type: "Remote",
       points: [
-        "Performed AI-driven exploratory data analysis, developed predictive credit risk frameworks and collections strategies.",
-        "Developed dashboards and generated strategic business insights through data visualization."
+        "Performed AI-driven exploratory data analysis, developed predictive credit risk frameworks and collections strategies."
+      ]
+    },
+    {
+      title: "Data Visualisation Simulation",
+      company: "Tata Group",
+      date: "Virtual Experience Program",
+      type: "Remote",
+      points: [
+        "Developed interactive dashboards and generated strategic business insights through comprehensive data visualization."
       ]
     },
     {
@@ -33,7 +41,7 @@ export default function Experience() {
       date: "Virtual Experience Program",
       type: "Remote",
       points: [
-        "Built Tableau dashboards, performed data analysis and derived business insights using Excel."
+        "Built Tableau dashboards, performed quantitative data analysis and derived actionable business insights using Excel."
       ]
     },
     {
@@ -42,20 +50,24 @@ export default function Experience() {
       date: "Virtual Experience Program",
       type: "Remote",
       points: [
-        "Worked on Kafka integration, Spring Boot microservices and REST API development."
+        "Worked on Kafka integration, Spring Boot microservices, and robust REST API development."
       ]
     },
     {
       title: "Core Member – Volleyball and Carrom Teams",
       company: "Sports Club, IIIT Vadodara",
       date: "2024 – Present",
-      type: "Volunteering",
+      type: "Volunteering / Managerial",
       points: [
         "Represented IIIT Vadodara as a Volleyball Player in Inter-IIIT sports tournaments and competitions.",
         "Actively contributed to team coordination, practice sessions, and sports event management as a core member.",
         "Promoted student participation in sports activities and collaborated with fellow members to organize intra-college sporting events."
       ]
     }
+  ];
+
+  const simulationBadges = [
+    "Tata Group", "Deloitte Australia", "TCS", "JPMorgan Chase", "Lloyds Banking Group", "Commonwealth Bank", "Datacom"
   ];
 
   return (
@@ -106,6 +118,23 @@ export default function Experience() {
               </div>
             </motion.div>
           ))}
+        </div>
+
+        {/* Industry Simulations Completed */}
+        <div className="mt-14 pt-8 border-t border-slate-200 dark:border-white/10">
+          <h3 className="text-sm font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-4 text-center">
+            Completed Industry Virtual Experience Programs
+          </h3>
+          <div className="flex flex-wrap justify-center gap-2.5">
+            {simulationBadges.map((badge) => (
+              <span
+                key={badge}
+                className="text-xs font-semibold px-3.5 py-1.5 rounded-full bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 text-slate-700 dark:text-slate-300 hover:border-primary/40 hover:text-primary transition-colors"
+              >
+                {badge}
+              </span>
+            ))}
+          </div>
         </div>
       </motion.div>
     </section>

@@ -8,27 +8,51 @@ export default function Projects() {
   const projects = [
     {
       title: "Old Age Home Management System",
-      description: "Designed modules for residents, staff and inventory using object-oriented principles. Integrated modular classes for maintainability and scalability.",
-      tags: ["Java", "OOP", "System Design"],
-      link: "#"
+      domain: "Java & OOP",
+      description: "A comprehensive management system engineered for old age home operations, handling resident records, staff scheduling, and inventory workflows.",
+      highlights: [
+        "Designed modules for residents, staff, and inventory using object-oriented principles.",
+        "Integrated modular classes for high maintainability, code reusability, and scalability.",
+        "Ensured smooth data flow and business logic validation across all management modules."
+      ],
+      tags: ["Java", "OOP", "System Architecture", "Modular Design"],
+      link: "https://github.com/Aravind0875"
     },
     {
       title: "Rail Saarthi",
-      description: "Created a railway assistance database with comprehensive ER modeling. Implemented SQL queries for schedules, bookings and passenger management.",
-      tags: ["SQL", "DBMS", "ER Modeling"],
-      link: "#"
+      domain: "SQL & DBMS",
+      description: "A centralized railway assistance and management database designed with robust Entity-Relationship modeling for complex scheduling and passenger transactions.",
+      highlights: [
+        "Created a railway assistance database with comprehensive ER modeling and normalization.",
+        "Implemented optimized SQL queries for schedules, bookings, and passenger records.",
+        "Designed relational structures to ensure ACID compliance, performance, and data integrity."
+      ],
+      tags: ["SQL", "DBMS", "ER Modeling", "Relational Schema", "MySQL"],
+      link: "https://github.com/Aravind0875"
     },
     {
       title: "Mixed Criticality Scheduling",
-      description: "Developed scheduling strategies for mixed-criticality real-time tasks. Prioritized task execution based on criticality levels and deadlines.",
-      tags: ["Operating Systems", "C", "Simulation"],
-      link: "#"
+      domain: "Operating Systems",
+      description: "An advanced real-time CPU scheduling simulation designed to balance mixed-criticality workloads under stringent task deadlines.",
+      highlights: [
+        "Developed scheduling strategies tailored for mixed-criticality real-time embedded tasks.",
+        "Prioritized task execution dynamically based on criticality levels and hard deadlines.",
+        "Ensured guaranteed system stability and fault resilience under high workload simulations."
+      ],
+      tags: ["Operating Systems", "C", "Real-Time Scheduling", "Simulation"],
+      link: "https://github.com/Aravind0875"
     },
     {
-      title: "Non-Contact Iron Bar Measurement",
-      description: "Designed a sensor-based system for accurate iron bar length measurement. Integrated data acquisition and processing algorithms for precise calculations.",
-      tags: ["Sensors", "Data Acquisition", "Algorithms"],
-      link: "#"
+      title: "Non-Contact Iron Bar Length Measurement System",
+      domain: "Embedded & Sensors",
+      description: "An industrial-grade measurement framework utilizing non-contact sensors and real-time algorithmic signal processing for high-precision length estimation.",
+      highlights: [
+        "Designed a sensor-based measurement system for non-contact iron bar dimensional inspection.",
+        "Integrated data acquisition and signal processing algorithms for micro-precise calculations.",
+        "Engineered real-time feedback mechanisms and calibration algorithms for error minimization."
+      ],
+      tags: ["Sensors", "Data Acquisition", "Signal Processing", "Algorithms"],
+      link: "https://github.com/Aravind0875"
     }
   ];
 
@@ -61,16 +85,30 @@ export default function Projects() {
                 </div>
                 
                 <div className="p-6 flex flex-col flex-grow">
-                  <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-3 group-hover:text-primary transition-colors duration-300">
+                  <div className="flex items-center justify-between gap-2 mb-2">
+                    <span className="text-xs font-semibold px-2.5 py-0.5 rounded-md bg-primary/10 text-primary border border-primary/20">
+                      {project.domain}
+                    </span>
+                  </div>
+                  <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-primary transition-colors duration-300">
                     {project.title}
                   </h3>
-                  <p className="text-sm text-slate-600 dark:text-slate-400 mb-6 flex-grow leading-relaxed">
+                  <p className="text-sm text-slate-600 dark:text-slate-400 mb-4 leading-relaxed">
                     {project.description}
                   </p>
                   
+                  <ul className="space-y-1.5 mb-6 flex-grow">
+                    {project.highlights.map((point, hIdx) => (
+                      <li key={hIdx} className="flex items-start text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                        <span className="w-1.5 h-1.5 rounded-full bg-primary/70 mt-1.5 mr-2 shrink-0"></span>
+                        <span>{point}</span>
+                      </li>
+                    ))}
+                  </ul>
+
                   <div className="flex flex-wrap gap-2 mb-6">
                     {project.tags.map(tag => (
-                      <span key={tag} className="text-xs font-semibold px-3 py-1 rounded-full bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 text-slate-600 dark:text-slate-300 group-hover:border-primary/30 transition-colors">
+                      <span key={tag} className="text-xs font-medium px-3 py-1 rounded-full bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 text-slate-600 dark:text-slate-300 group-hover:border-primary/30 transition-colors">
                         {tag}
                       </span>
                     ))}
